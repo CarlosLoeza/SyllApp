@@ -129,15 +129,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-bN-bjG">
-                                <rect key="frame" x="110" y="477" width="155" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Take Picture"/>
-                                <connections>
-                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dJ-WE-9R9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzC-dq-UC1">
                                 <rect key="frame" x="313" y="28" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,15 +137,23 @@
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvJ-aO-fCl"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageCam" translatesAutoresizingMaskIntoConstraints="NO" id="elM-5M-aZ3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjB-Y1-xvi">
+                                <rect key="frame" x="16" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="b5b-8d-YDL" kind="presentation" id="OUu-5E-Ng8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-hT-ktd">
+                                <rect key="frame" x="0.0" y="60" width="375" height="653"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="imageCam" destination="elM-5M-aZ3" id="Wk0-8U-6cm"/>
+                        <outlet property="imageCam" destination="GmK-hT-ktd" id="qsl-tk-jam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,7 +161,4 @@
             <point key="canvasLocation" x="-328.80000000000001" y="19.340329835082461"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imageCam" width="16" height="16"/>
-    </resources>
 </document>

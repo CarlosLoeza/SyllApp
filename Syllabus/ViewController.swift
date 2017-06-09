@@ -26,14 +26,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     // Save Button
+    // I need to insert code so it can save the photo
     @IBAction func save(_ sender: UIButton) {
         let imageData = UIImageJPEGRepresentation(imageCam.image!, 0.6)
         let compressedJPEGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPEGImage! , nil, nil, nil)
+        
     }
     
     
     // Take Picture button
+    // This calls up the camera
     @IBAction func takePicture(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             
@@ -42,12 +45,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             picker.sourceType = UIImagePickerControllerSourceType.camera;
             picker.allowsEditing = false
             self.present(picker, animated: true, completion: nil)
+            
+            // test button 
+            print("Works")
+            
         }
         
        
     }
     
-    
+    // Once the picture has been taken, go back to the main page
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo:  [NSObject: Any]!) {
         imageCam.image = image
         self.dismiss(animated: true, completion: nil)
