@@ -10,15 +10,15 @@ import UIKit
 import TesseractOCR
 
 
-
+// Notes:
 // In order to use the camera you have to add { UIImagePickerControllerDelegate, UINavigationControllerDelegate}
 //    into viewController
 
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate{
     
-    
-   
+    // Test to push, 
+    var note = 0
     
     @IBOutlet weak var UpcomingTableView: UITableView!
     
