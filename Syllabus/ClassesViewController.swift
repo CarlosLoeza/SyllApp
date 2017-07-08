@@ -27,7 +27,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
-//    Database initialization
+    // Database initialization
     let realm = try? Realm()
    
     
@@ -42,20 +42,20 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let alertController = UIAlertController(title: "What class?", message: "Enter name and description:", preferredStyle: .alert)
         
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
-            let name = alertController.textFields![0] as UITextField
+        let name = alertController.textFields![0] as UITextField
         let desc = alertController.textFields![1] as UITextField
             
     
         
-//            adds class to database
+        // adds class to database
+        self.addClass(name: name.text!, desc: desc.text!)
+        // Reload the tableview
+        self.tableView.reloadData()
             
-            self.addClass(name: name.text!, desc: desc.text!)
-//        Reload the tableview
-            self.tableView.reloadData()
             
-        }
+    }
         
-//        When alert is canceled blah blah
+        // When alert is canceled blah blah
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
         
         alertController.addTextField { (textField : UITextField!) -> Void in
@@ -85,7 +85,6 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         try self.realm?.write {
             self.realm?.add(actclass)
-           
         }
         }catch{
             print("problem adding to realm")
@@ -103,6 +102,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Do any additional setup after loading the view.
     }
+    
 //    This returns the all the classes from the database
 //    You can see whats in the database by going to RealmObjects.swift
     
@@ -131,7 +131,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cl = theclasses[indexPath[1]]
         cell.classTableIViewLabel.text? = cl.name
         cell.celldetailLabel.text? = cl.descriptions
-        
+    
      
         
         print(indexPath)

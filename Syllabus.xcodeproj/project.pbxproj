@@ -14,6 +14,10 @@
 		071FD8921EE62AF7000B119D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071FD8901EE62AF7000B119D /* LaunchScreen.storyboard */; };
 		071FD89D1EE62AF7000B119D /* SyllabusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FD89C1EE62AF7000B119D /* SyllabusTests.swift */; };
 		071FD8A81EE62AF8000B119D /* SyllabusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FD8A71EE62AF8000B119D /* SyllabusUITests.swift */; };
+		0725C3C71F1156C7001C6F56 /* HandoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C3C61F1156C7001C6F56 /* HandoutTableViewController.swift */; };
+		0725C3C91F116481001C6F56 /* SelectedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C3C81F116481001C6F56 /* SelectedImageViewController.swift */; };
+		0737CFD01F00DCC000724D71 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737CFCE1F00DCC000724D71 /* TableViewCell.swift */; };
+		0737CFD11F00DCC000724D71 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0737CFCF1F00DCC000724D71 /* TableViewCell.xib */; };
 		076BCB571EFB3327001ADC9E /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 076BCB561EFB3327001ADC9E /* tessdata */; };
 		076BCB5A1EFB3357001ADC9E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076BCB581EFB3357001ADC9E /* Realm.framework */; };
 		076BCB5B1EFB3357001ADC9E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076BCB591EFB3357001ADC9E /* RealmSwift.framework */; };
@@ -76,6 +80,10 @@
 		071FD8A31EE62AF8000B119D /* SyllabusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyllabusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071FD8A71EE62AF8000B119D /* SyllabusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllabusUITests.swift; sourceTree = "<group>"; };
 		071FD8A91EE62AF8000B119D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0725C3C61F1156C7001C6F56 /* HandoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandoutTableViewController.swift; sourceTree = "<group>"; };
+		0725C3C81F116481001C6F56 /* SelectedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImageViewController.swift; sourceTree = "<group>"; };
+		0737CFCE1F00DCC000724D71 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0737CFCF1F00DCC000724D71 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		076BCB561EFB3327001ADC9E /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		076BCB581EFB3357001ADC9E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		076BCB591EFB3357001ADC9E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -154,6 +162,8 @@
 				1B35E4BF1EE9FC8300680846 /* RealmObjects.swift */,
 				1BA797B51EE76A1700B03B53 /* ClassesViewController.swift */,
 				071FD8891EE62AF7000B119D /* DetailViewController.swift */,
+				0725C3C61F1156C7001C6F56 /* HandoutTableViewController.swift */,
+				0725C3C81F116481001C6F56 /* SelectedImageViewController.swift */,
 				071FD88B1EE62AF7000B119D /* Main.storyboard */,
 				071FD88E1EE62AF7000B119D /* Assets.xcassets */,
 				071FD8901EE62AF7000B119D /* LaunchScreen.storyboard */,
@@ -183,9 +193,19 @@
 			path = SyllabusUITests;
 			sourceTree = "<group>";
 		};
+		0737CFCD1F00D97A00724D71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0737CFCE1F00DCC000724D71 /* TableViewCell.swift */,
+				0737CFCF1F00DCC000724D71 /* TableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		1BA797B71EE76C3600B03B53 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0737CFCD1F00D97A00724D71 /* Cell */,
 				1BA797B81EE76C5400B03B53 /* Classes.swift */,
 			);
 			name = Models;
@@ -335,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				071FD8921EE62AF7000B119D /* LaunchScreen.storyboard in Resources */,
+				0737CFD11F00DCC000724D71 /* TableViewCell.xib in Resources */,
 				076BCB571EFB3327001ADC9E /* tessdata in Resources */,
 				071FD88F1EE62AF7000B119D /* Assets.xcassets in Resources */,
 				071FD88D1EE62AF7000B119D /* Main.storyboard in Resources */,
@@ -529,7 +550,10 @@
 				071FD88A1EE62AF7000B119D /* DetailViewController.swift in Sources */,
 				1BA797B61EE76A1700B03B53 /* ClassesViewController.swift in Sources */,
 				1BA797B91EE76C5400B03B53 /* Classes.swift in Sources */,
+				0737CFD01F00DCC000724D71 /* TableViewCell.swift in Sources */,
 				071FD8881EE62AF7000B119D /* AppDelegate.swift in Sources */,
+				0725C3C91F116481001C6F56 /* SelectedImageViewController.swift in Sources */,
+				0725C3C71F1156C7001C6F56 /* HandoutTableViewController.swift in Sources */,
 				1B35E4C01EE9FC8300680846 /* RealmObjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
